@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DealAxis — Intelligence. Access. Execution.</title>
+<link rel="icon" type="image/png" href="../logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- CURSOR -->
+<div id="cursor"><div id="cursor-label"></div></div>
+<div id="cursor-ring"></div>
+
+<!-- LOADER -->
+<div id="loader">
+  <div id="loader-logo">
+    <img src="../logo.png" class="logo-symbol" style="width: 60px; height: 60px; margin-bottom: 1rem;">
+    <div>Deal<span>Axis</span></div>
+  </div>
+  <div id="loader-bar"><div id="loader-progress"></div></div>
+  <div id="loader-count">0%</div>
+</div>
+
+<!-- MOBILE NAV -->
+<div id="mobile-nav">
+  <button id="mobile-close">×</button>
+  <a href="#about">What we do</a>
+  <a href="#deals">Deal types</a>
+  <a href="#success">Successes</a>
+  <a href="#how">How it works</a>
+  <a href="#who">Who we serve</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contact">Get started</a>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">
+    <img src="../logo.png" class="logo-symbol" alt="DealAxis Logo">
+    <div>Deal<span>Axis</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">What we do</a></li>
+    <li><a href="#deals">Deal types</a></li>
+    <li><a href="#success">Successes</a></li>
+    <li><a href="#how">How it works</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Get started</a>
+  <button class="nav-burger" id="burger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Nigeria's Off-Market Deal Platform</div>
+    <h1 class="scramble" data-text="The centre of every serious deal.">The centre of every serious <span class="gold">deal.</span></h1>
+    <p class="hero-sub">DealAxis connects serious buyers and sellers for off-market property and business deals in Nigeria — privately, professionally, and at speed.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary btn-mag" data-label="Submit">Submit a deal →</a>
+      <a href="#contact" class="btn-ghost btn-mag" data-label="Join">Register as buyer</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-val"><span class="counter" data-target="100">0</span><span>%</span></div>
+        <div class="stat-lbl">Off-market only</div>
+      </div>
+      <div>
+        <div class="stat-val"><span class="counter" data-target="2">0</span></div>
+        <div class="stat-lbl">Deal categories</div>
+      </div>
+      <div>
+        <div class="stat-val"><span class="counter" data-target="24">0</span><span>h</span></div>
+        <div class="stat-lbl">Response guarantee</div>
+      </div>
+      <div>
+        <div class="stat-val">0<span>%</span></div>
+        <div class="stat-lbl">Public listings</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-row">
+    <div class="ticker-track">
+      <span class="tick-item"><span class="dot"></span>Off-market real estate</span>
+      <span class="tick-item"><span class="dot"></span>Private business sales</span>
+      <span class="tick-item"><span class="dot gdot"></span>Lagos · Abuja · Port Harcourt</span>
+      <span class="tick-item"><span class="dot"></span>No public listings</span>
+      <span class="tick-item"><span class="dot"></span>Verified buyers & sellers</span>
+      <span class="tick-item"><span class="dot gdot"></span>Intelligence. Access. Execution.</span>
+      <span class="tick-item"><span class="dot"></span>Confidential transactions</span>
+      <span class="tick-item"><span class="dot"></span>Serious deals only</span>
+      <span class="tick-item"><span class="dot"></span>Off-market real estate</span>
+      <span class="tick-item"><span class="dot"></span>Private business sales</span>
+      <span class="tick-item"><span class="dot gdot"></span>Lagos · Abuja · Port Harcourt</span>
+      <span class="tick-item"><span class="dot"></span>No public listings</span>
+      <span class="tick-item"><span class="dot"></span>Verified buyers & sellers</span>
+      <span class="tick-item"><span class="dot gdot"></span>Intelligence. Access. Execution.</span>
+      <span class="tick-item"><span class="dot"></span>Confidential transactions</span>
+      <span class="tick-item"><span class="dot"></span>Serious deals only</span>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="reveal from-left">
+      <div class="section-eyebrow">What we do</div>
+      <h2 class="section-title">We move deals the world <em>never sees.</em></h2>
+      <p class="section-sub">Most high-value transactions in Nigeria never reach the public market. They happen quietly — between trusted parties, with the right intermediary. DealAxis is that intermediary.</p>
+      <p class="section-sub" style="margin-top:1rem;">We operate in two categories where the off-market gap is largest, the fees are highest, and the need for professional execution is most critical.</p>
+    </div>
+    <div class="about-feature-grid reveal from-right">
+      <div class="feat-box">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h4>Real estate</h4>
+        <p>Property that never gets listed. Land, residential, and commercial assets.</p>
+      </div>
+      <div class="feat-box">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <h4>Business sales</h4>
+        <p>Private acquisitions for owners who want a quiet, professional exit.</p>
+      </div>
+      <div class="feat-box">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
+        <h4>Private network</h4>
+        <p>Access a curated database of vetted, capital-ready buyers.</p>
+      </div>
+      <div class="feat-box">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h4>Full discretion</h4>
+        <p>NDA signed before any deal detail is discussed. Always.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEALS -->
+<section id="deals" class="deals-sect">
+  <div class="reveal">
+    <div class="section-eyebrow">Deal categories</div>
+    <h2 class="section-title">Two sectors. <em>Total focus.</em></h2>
+    <p class="section-sub">We don't do everything. We do two things with precision — and that is exactly why we close.</p>
+  </div>
+  <div class="deals-grid stagger" style="margin-top:3rem">
+    <div class="deal-card">
+      <span class="deal-fee-badge">1.5% – 3% fee</span>
+      <div class="deal-num">01</div>
+      <h3>Off-market real estate</h3>
+      <p>The largest off-market opportunity in Nigeria. We connect buyers and sellers of residential, commercial, and land assets that never reach public listing platforms — quietly, professionally, and with all documentation verified.</p>
+      <div class="deal-tags">
+        <span class="tag">Residential property</span>
+        <span class="tag">Commercial spaces</span>
+        <span class="tag">Land acquisition</span>
+        <span class="tag">Lagos</span>
+        <span class="tag">Abuja</span>
+        <span class="tag">PH</span>
+      </div>
+    </div>
+    <div class="deal-card">
+      <span class="deal-fee-badge">2% – 5% fee</span>
+      <div class="deal-num">02</div>
+      <h3>Private business acquisitions</h3>
+      <p>SME owners who want a quiet exit. Investors who want operational businesses without starting from scratch. We match them privately, structure the introduction, and earn our fee when the deal closes.</p>
+      <div class="deal-tags">
+        <span class="tag">SME acquisitions</span>
+        <span class="tag">Business sales</span>
+        <span class="tag">Quiet exits</span>
+        <span class="tag">Distressed assets</span>
+        <span class="tag">All sectors</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUCCESSES -->
+<section id="success" class="success-sect">
+  <div class="reveal">
+    <div class="section-eyebrow">Recent Successes</div>
+    <h2 class="section-title">Deals we've <em>recently moved.</em></h2>
+    <p class="section-sub">Discretion is our priority. While we cannot name names, our results speak for themselves.</p>
+  </div>
+  <div class="success-grid stagger">
+    <div class="success-card">
+      <span class="success-tag">Real Estate</span>
+      <h4>₦450M Prime Land Acquisition</h4>
+      <p>A multi-hectare industrial site in the Lekki Free Trade Zone. Matched with a manufacturer within 14 days.</p>
+      <div class="success-meta">
+        <div class="success-val">₦450,000,000</div>
+        <div class="success-days">14 days to close</div>
+      </div>
+    </div>
+    <div class="success-card">
+      <span class="success-tag">Business Sale</span>
+      <h4>Retail Pharmacy Chain Exit</h4>
+      <p>A 5-branch pharmacy chain in Abuja. Acquired by a health conglomerate looking for rapid expansion.</p>
+      <div class="success-meta">
+        <div class="success-val">₦280,000,000</div>
+        <div class="success-days">32 days to close</div>
+      </div>
+    </div>
+    <div class="success-card">
+      <span class="success-tag">Real Estate</span>
+      <h4>Luxury Penthouse Sale</h4>
+      <p>An off-market residence in Victoria Island. Sold to a diaspora investor without any public listing.</p>
+      <div class="success-meta">
+        <div class="success-val">₦720,000,000</div>
+        <div class="success-days">8 days to close</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section id="how">
+  <div class="reveal">
+    <div class="section-eyebrow">How it works</div>
+    <h2 class="section-title">Three steps. <em>One close.</em></h2>
+    <p class="section-sub">Our process is simple by design. The complexity is on our side — not yours.</p>
+  </div>
+  <div class="how-wrap">
+    <div class="how-line"><div class="how-line-fill" id="howLine"></div></div>
+    <div class="how-steps reveal" style="margin-top:0; border-top:none; border-radius: 0 0 6px 6px">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h4>Submit or register</h4>
+        <p>Sellers submit deal details confidentially. Buyers register their acquisition criteria. Everything stays private until we confirm a match exists.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h4>We verify and match</h4>
+        <p>We verify the deal, check documentation, qualify both parties, and match from our buyer network. NDA signed before any introduction is made.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h4>Deal closes, fee paid</h4>
+        <p>We facilitate the introduction and support negotiation. Our fee is paid only upon successful closing — our incentives are perfectly aligned with yours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why-sect">
+  <div class="reveal">
+    <div class="section-eyebrow">Why DealAxis</div>
+    <h2 class="section-title">What makes us <em>different.</em></h2>
+  </div>
+  <div class="why-grid stagger">
+    <div class="why-item">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <h4>Confidential by default</h4>
+      <p>Every engagement begins with an NDA. Sellers' assets are never exposed without consent. Buyers' identities are never shared prematurely.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
+      <h4>Qualified network only</h4>
+      <p>Our buyer database is vetted for capital readiness and genuine deal intent. No time-wasters. No browsers. Only closers.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+      <h4>Documentation first</h4>
+      <p>Before any deal moves forward, we verify ownership, check documentation, and ensure the asset is transactable. This protects everyone.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+      <h4>Fee on close only</h4>
+      <p>We earn nothing until the deal closes. Our incentives are perfectly aligned with yours — we close or we don't charge.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHO -->
+<section id="who">
+  <div class="reveal">
+    <div class="section-eyebrow">Who we serve</div>
+    <h2 class="section-title">Built for two <em>kinds of people.</em></h2>
+  </div>
+  <div class="who-grid">
+    <div class="who-card buyer reveal from-left">
+      <span class="who-badge badge-b">For buyers</span>
+      <h3>Capital-ready investors and acquirers</h3>
+      <p>You have capital. You want deals the public doesn't know about. DealAxis is your sourcing partner — giving you access before anyone else gets there.</p>
+      <ul class="who-list">
+        <li>Real estate investors building portfolios</li>
+        <li>Entrepreneurs looking to acquire operating businesses</li>
+        <li>Diaspora investors seeking Nigerian market exposure</li>
+        <li>Family offices and HNW individuals</li>
+        <li>Developers looking for off-plan or distressed land</li>
+      </ul>
+    </div>
+    <div class="who-card seller reveal from-right">
+      <span class="who-badge badge-s">For sellers</span>
+      <h3>Owners who want a quiet, professional exit</h3>
+      <p>You have an asset or a business to sell — but you don't want it public. You need discretion, speed, and a buyer who can actually close.</p>
+      <ul class="who-list">
+        <li>Property owners who want to sell without public exposure</li>
+        <li>Business owners planning a quiet exit</li>
+        <li>Landlords with multiple assets looking to offload selectively</li>
+        <li>Estates and probate situations requiring discretion</li>
+        <li>Developers with inventory to move privately</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="faq-sect">
+  <div class="reveal">
+    <div class="section-eyebrow">Common Questions</div>
+    <h2 class="section-title">Frequently <em>asked.</em></h2>
+  </div>
+  <div class="faq-wrap stagger">
+    <div class="faq-item">
+      <button class="faq-trigger">How do you ensure confidentiality?<span class="faq-icon"></span></button>
+      <div class="faq-content"><div class="faq-inner">Every engagement starts with a legally binding Non-Disclosure Agreement (NDA). We do not share asset details or buyer identities until both parties are vetted and the NDA is signed. Your business or property is never publicly listed.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-trigger">What are your service fees?<span class="faq-icon"></span></button>
+      <div class="faq-content"><div class="faq-inner">Our fees range from 1.5% to 5% depending on the deal category and complexity. The best part? We operate on a success-fee model. You only pay us when the transaction successfully closes.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-trigger">How do you verify buyers and sellers?<span class="faq-icon"></span></button>
+      <div class="faq-content"><div class="faq-inner">Sellers must provide proof of ownership and clear documentation (C of O, registration papers, etc.). Buyers are vetted for capital readiness through bank comfort letters or proof of funds before introductions are made.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-trigger">How long does it take to find a match?<span class="faq-icon"></span></button>
+      <div class="faq-content"><div class="faq-inner">For real estate, we often have a match in our database immediately. For business sales, it typically takes 2–4 weeks to identify and vet the right acquirer. We guarantee a response to any new submission within 24 hours.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section id="contact" class="form-sect">
+  <div class="form-layout">
+    <div class="reveal from-left">
+      <div class="section-eyebrow">Get started</div>
+      <h2 class="section-title">Let's talk about your <em>deal.</em></h2>
+      <p class="section-sub">Whether you have an asset to sell or capital to deploy, the first step is a conversation. All submissions are treated with full confidentiality.</p>
+      <div class="form-benefits">
+        <div class="form-benefit">
+          <div class="fb-dot"></div>
+          <div>
+            <h5>Free initial consultation</h5>
+            <p>Your first conversation costs nothing. We assess the deal and tell you honestly whether we can close it.</p>
+          </div>
+        </div>
+        <div class="form-benefit">
+          <div class="fb-dot"></div>
+          <div>
+            <h5>NDA before everything</h5>
+            <p>We sign a confidentiality agreement before we discuss deal details. Your identity — always protected.</p>
+          </div>
+        </div>
+        <div class="form-benefit">
+          <div class="fb-dot"></div>
+          <div>
+            <h5>Response within 24 hours</h5>
+            <p>Every submission receives a response within one business day. No black holes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-box reveal from-right">
+      <div class="form-tabs">
+        <button class="ftab active" onclick="switchTab('buyer')">I want to buy</button>
+        <button class="ftab" onclick="switchTab('seller')">I want to sell</button>
+      </div>
+      <div class="fc active" id="fc-buyer">
+        <div class="frow">
+          <div class="fgroup"><label>First name</label><input type="text" placeholder="Chukwuemeka"></div>
+          <div class="fgroup"><label>Last name</label><input type="text" placeholder="Okafor"></div>
+        </div>
+        <div class="fgroup"><label>Email address</label><input type="email" placeholder="you@company.com"></div>
+        <div class="fgroup"><label>Phone number</label><input type="tel" placeholder="+234 800 000 0000"></div>
+        <div class="fgroup"><label>Deal type interest</label>
+          <select><option value="" disabled selected>Select deal type</option><option>Off-market real estate</option><option>Private business acquisition</option><option>Both</option></select>
+        </div>
+        <div class="fgroup"><label>Budget range</label>
+          <select><option value="" disabled selected>Select budget</option><option>₦10M – ₦50M</option><option>₦50M – ₦200M</option><option>₦200M – ₦500M</option><option>₦500M+</option></select>
+        </div>
+        <div class="fgroup"><label>What are you looking for?</label><textarea placeholder="Describe your ideal acquisition — location, type, timeline, and any specific requirements."></textarea></div>
+        <button class="fsub">Submit buyer profile</button>
+        <p class="fnote">Treated with full confidentiality. Response within 24 hours.</p>
+      </div>
+      <div class="fc" id="fc-seller">
+        <div class="frow">
+          <div class="fgroup"><label>First name</label><input type="text" placeholder="Adaeze"></div>
+          <div class="fgroup"><label>Last name</label><input type="text" placeholder="Nwosu"></div>
+        </div>
+        <div class="fgroup"><label>Email address</label><input type="email" placeholder="you@company.com"></div>
+        <div class="fgroup"><label>Phone number</label><input type="tel" placeholder="+234 800 000 0000"></div>
+        <div class="fgroup"><label>What are you selling?</label>
+          <select><option value="" disabled selected>Select asset type</option><option>Residential property</option><option>Commercial property</option><option>Land</option><option>Business / company</option></select>
+        </div>
+        <div class="fgroup"><label>Asking price</label><input type="text" placeholder="e.g. ₦150,000,000"></div>
+        <div class="fgroup"><label>Tell us about the asset</label><textarea placeholder="Location, size, condition, reason for selling, and any documentation you currently have."></textarea></div>
+        <button class="fsub">Submit deal for review</button>
+        <p class="fnote">All submissions are confidential. NDA signed before details are discussed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta reveal">
+  <h2 class="section-title">The next big move starts <em>right here.</em></h2>
+  <a href="#contact" class="btn-primary btn-mag" data-label="Start">Get started now →</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="#" class="footer-logo" style="text-decoration:none; display:flex; align-items:center; gap:12px;">
+        <img src="../logo.png" class="logo-symbol" style="width: 40px; height: 40px;">
+        <span style="color:var(--text)">Deal<span style="color:var(--green-light)">Axis</span></span>
+      </a>
+      <p>Nigeria's off-market deal platform. Connecting serious buyers and sellers for property and business transactions — privately, professionally, and at speed.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Platform</h5>
+      <ul>
+        <li><a href="#deals">Deal types</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#who">Who we serve</a></li>
+        <li><a href="#contact">Submit a deal</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Deals</h5>
+      <ul>
+        <li><a href="#deals">Real estate</a></li>
+        <li><a href="#deals">Business acquisitions</a></li>
+        <li><a href="#contact">Register as buyer</a></li>
+        <li><a href="#contact">List your asset</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:deals@dealaxis.com">deals@dealaxis.com</a></li>
+        <li><a href="#">Lagos, Nigeria</a></li>
+        <li><a href="#">WhatsApp us</a></li>
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 DealAxis. All rights reserved. Intelligence. Access. Execution.</p>
+    <div class="footer-tags">
+      <span class="ftag">Nigeria</span>
+      <span class="ftag">Off-market only</span>
+      <span class="ftag">Confidential</span>
+    </div>
+  </div>
+</footer>
+
+<!-- THREE.JS CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>
